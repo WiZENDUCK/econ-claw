@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>经研龙虾｜Poster v1</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: #0d1b2f;
+      --panel-2: #10243f;
+      --text: #eaf2ff;
+      --muted: #9fb3d1;
+      --accent: #78d4ff;
+      --accent-2: #7cf0c8;
+      --accent-3: #ffb86b;
+      --danger: #ff7f7f;
+      --line: rgba(255,255,255,.1);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(120,212,255,.12), transparent 28%),
+        radial-gradient(circle at right 20% top 10%, rgba(124,240,200,.08), transparent 20%),
+        linear-gradient(180deg, #08111d 0%, #07111f 100%);
+      color: var(--text);
+    }
+    .poster {
+      width: 1400px;
+      margin: 0 auto;
+      padding: 36px;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 22px;
+      margin-bottom: 22px;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      backdrop-filter: blur(6px);
+    }
+    .title {
+      font-size: 52px;
+      font-weight: 800;
+      letter-spacing: .5px;
+      margin: 0 0 10px 0;
+    }
+    .subtitle {
+      font-size: 22px;
+      line-height: 1.5;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+    .badges { display: flex; gap: 10px; flex-wrap: wrap; }
+    .badge {
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(120,212,255,.12);
+      border: 1px solid rgba(120,212,255,.2);
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .big-quote {
+      font-size: 28px;
+      line-height: 1.45;
+      font-weight: 700;
+      margin: 0;
+    }
+    .quote-note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-bottom: 22px;
+    }
+    h2 {
+      margin: 0 0 14px 0;
+      font-size: 26px;
+      font-weight: 800;
+    }
+    h3 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      color: var(--accent);
+    }
+    p, li {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text);
+    }
+    ul { margin: 0; padding-left: 20px; }
+    .mini {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+      align-items: stretch;
+    }
+    .node {
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px;
+      min-height: 124px;
+    }
+    .node strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    .arrow {
+      text-align: center;
+      font-size: 28px;
+      color: var(--accent);
+      margin: 6px 0;
+    }
+    .review-loop {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .loop-card {
+      border-radius: 18px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.025);
+    }
+    .loop-card:nth-child(1) { border-color: rgba(120,212,255,.35); }
+    .loop-card:nth-child(2) { border-color: rgba(255,127,127,.35); }
+    .loop-card:nth-child(3) { border-color: rgba(124,240,200,.35); }
+    .loop-card:nth-child(4) { border-color: rgba(255,184,107,.35); }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 22px;
+    }
+    .pill-title {
+      color: var(--accent-2);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .stack { display: grid; gap: 12px; }
+    .stack-item {
+      background: rgba(255,255,255,.025);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px;
+    }
+    .footer {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+    .accent { color: var(--accent); }
+    .accent2 { color: var(--accent-2); }
+    .accent3 { color: var(--accent-3); }
+  </style>
+</head>
+<body>
+  <div class="poster">
+    <section class="hero">
+      <div class="card">
+        <div class="pill-title">经研龙虾 · Econ Claw</div>
+        <h1 class="title">面向经济金融研究的<br>闭环式 AI 学术工作台</h1>
+        <div class="subtitle">
+          从 <span class="accent">选题形成</span>、<span class="accent">文献定位</span>、<span class="accent">识别设计</span> 到
+          <span class="accent2">数据准备</span>、<span class="accent2">实证分析</span>、<span class="accent3">论文表达与投稿前质检</span>，
+          将 AI 从“会写字”推进到“参与完整研究工作流”。
+        </div>
+        <div class="badges">
+          <span class="badge">经济学 / 金融学垂直</span>
+          <span class="badge">Skill + Prompt 研究动作库</span>
+          <span class="badge">Reviewer / Critic / Defender / Fixer</span>
+          <span class="badge">CSMAR 数据连接</span>
+          <span class="badge">可外接 Claude Code / Codex</span>
+        </div>
+      </div>
+      <div class="card">
+        <p class="big-quote">不是一个更会写论文的通用模型，<br>而是一个更理解经济金融研究流程的协作者。</p>
+        <div class="quote-note">
+          经研龙虾聚焦经济金融研究中的真实痛点：题目难收敛、文献难定位、识别设计门槛高、
+          数据方案复杂、研究过程割裂，以及通用 AI 常见的幻觉与伪严谨问题。
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>01｜当下痛点</h2>
+        <ul>
+          <li><strong>只擅长文本，不擅长研究流程：</strong>通用 AI 能润色段落，却很难真正参与选题、设计、分析与返修。</li>
+          <li><strong>幻觉与伪严谨风险高：</strong>包括文献编造、方法错配、结果越界解释，以及“形式完整、实质脆弱”的输出。</li>
+          <li><strong>数据与方法脱节：</strong>研究问题、变量设计、专业数据库、实证分析和论文表达难以形成统一闭环。</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>02｜核心方案</h2>
+        <ul>
+          <li><strong>任务入口：</strong>以“政策能否做成题目”“这个设计更像 DID 还是 IV”“这张表能不能写进论文”为自然入口。</li>
+          <li><strong>方法引擎：</strong>内置 DID / IV / RDD / Panel / SDID / Bootstrap / Placebo / LASSO 等底层方法技能。</li>
+          <li><strong>审查闭环：</strong>通过 Reviewer / Critic / Defender / Fixer 在关键节点回看研究、收缩表述、修补漏洞。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" style="margin-bottom:22px;">
+      <h2>03｜闭环架构</h2>
+      <div class="flow">
+        <div class="node"><strong>任务入口</strong><div class="mini">政策 / 新闻 / 题目 / 结果表 / 草稿</div></div>
+        <div class="node"><strong>研究认知</strong><div class="mini">问题形成 / 文献定位 / 贡献提炼 / 识别设计</div></div>
+        <div class="node"><strong>数据连接</strong><div class="mini">变量需求 / 数据源判断 / CSMAR 等专业数据库</div></div>
+        <div class="node"><strong>实证执行</strong><div class="mini">清洗 / 描述统计 / 估计 / 稳健性 / cross-check</div></div>
+        <div class="node"><strong>论文表达</strong><div class="mini">摘要 / 引言 / 结果解读 / 投稿材料</div></div>
+        <div class="node"><strong>审查修订</strong><div class="mini">Reviewer / Critic / Defender / Fixer</div></div>
+        <div class="node"><strong>文档沉淀</strong><div class="mini">项目书 / 分析记录 / 草稿 / 返修记录</div></div>
+      </div>
+      <div class="arrow">→ → → 关键节点审查与回流 → → →</div>
+      <div class="mini">审查层可以回流到研究认知、数据连接、实证执行和论文表达各层，避免研究偏航。</div>
+    </section>
+
+    <section class="two-col">
+      <div class="card">
+        <h2>04｜审查机制</h2>
+        <div class="review-loop">
+          <div class="loop-card"><h3>Reviewer</h3><p>从完整匿名审稿人视角判断研究是否成立、论文是否经得起学术追问。</p></div>
+          <div class="loop-card"><h3>Critic</h3><p>做集中压力测试，优先击穿最脆弱的识别假设、结果解释和研究边界。</p></div>
+          <div class="loop-card"><h3>Defender</h3><p>在不偏离研究本意的前提下，判断哪些批评成立、哪些结论需要收缩。</p></div>
+          <div class="loop-card"><h3>Fixer</h3><p>把批评与防守意见转成可执行修改动作，形成返修清单与后续分析任务。</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>05｜当前能力结构</h2>
+        <div class="stack">
+          <div class="stack-item"><strong>上层任务型能力</strong><div class="mini">选题雷达、文献定位、识别设计医生、实证工坊、写作与投稿工坊、审稿人模式、CSMAR 数据助手、期刊路由器</div></div>
+          <div class="stack-item"><strong>底层方法型能力</strong><div class="mini">run-did / run-iv / run-rdd / run-panel / run-sdid / run-bootstrap / run-placebo / run-logit-probit / run-lasso / cross-check / robustness / make-table</div></div>
+          <div class="stack-item"><strong>外接执行与展示层</strong><div class="mini">可外接 Claude Code / Codex 做具体实施；可外接 HTML / PPT 生成器做比赛展示材料。</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="card">
+        <h2>06｜典型场景</h2>
+        <p><strong>政策 / 新闻 → 研究问题</strong><br><span class="mini">输出候选题目、变量方向、数据源和识别思路。</span></p>
+        <p><strong>研究问题 → 设计与数据</strong><br><span class="mini">比较 DID / IV / RDD 等方法，并形成最小可行数据方案。</span></p>
+        <p><strong>结果表 → 论文表达</strong><br><span class="mini">生成结果段、审稿意见与返修方向。</span></p>
+      </div>
+      <div class="card">
+        <h2>07｜创新点</h2>
+        <ul>
+          <li>把 AI 从“文本辅助”推进到“研究工作流辅助”</li>
+          <li>把经济金融研究规范沉淀为可调用 skill</li>
+          <li>把审查、校验、回流机制嵌入主流程</li>
+          <li>把专业数据库与研究设计联动起来</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>08｜一句话总结</h2>
+        <p class="big-quote" style="font-size:24px;">AI 不只是帮研究者写，<br>而是开始参与经济金融研究的完整生产链。</p>
+        <div class="quote-note">经研龙虾的目标不是替代研究者，而是成为一个更懂研究流程、更懂方法边界、更懂审稿逻辑的协作者。</div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
