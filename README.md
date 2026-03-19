@@ -62,13 +62,20 @@
 
 ## 当前阶段
 
-当前仓库处于 **项目骨架搭建阶段**，接下来会优先推进：
+当前仓库已经完成项目骨架、任务技能、方法技能、角色层、规则层和基础展示材料的第一轮搭建，接下来会优先推进：
 
-1. 项目说明与架构文档
-2. 演示案例与 demo script
-3. 既有 workflow 能力映射
-4. MVP 任务拆解
-5. 比赛用项目书与展示材料
+1. 公开版项目书与对外说明页
+2. 演示案例与 demo / video script
+3. poster v2 与比赛展示物料升级
+4. 更多研究技能和方法引擎补齐
+5. 更完整的 MVP 演示闭环
+
+## 公开链接
+
+- **项目书（GitHub 完整版）**：[`PROJECT_BRIEF.md`](./PROJECT_BRIEF.md)
+- **Poster 在线页**：<https://wizenduck.github.io/econ-claw/poster/econ-claw-poster-v1.html>
+- **Poster 图片**：<https://wizenduck.github.io/econ-claw/poster/assets/econ-claw-poster-v1.png>
+- **GitHub Pages 主页**：<https://wizenduck.github.io/econ-claw/>
 
 ## 仓库结构
 
