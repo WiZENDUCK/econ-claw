@@ -238,3 +238,20 @@
 
 ### 12. `make-table`
 用于组织论文结果表结构、注释和输出顺序。
+
+
+---
+
+## 七、外接执行与展示能力
+
+经研龙虾可以进一步连接外部执行器与展示物料生成器，形成“龙虾管理 + 外部执行”的双层工作流。
+
+### 已导入能力
+- `imported-skills/claude-code`：Claude Code 外接执行
+- `imported-skills/codex-orchestrator`：Codex 外接执行 / 编排
+- `imported-skills/openclaw-ppt-generator`：本地 PPT 生成
+
+### 推荐定位
+- 经研龙虾负责：研究问题、设计、审查、返修、交互
+- Claude Code / Codex 负责：代码、脚本、工程实现
+- PPT 生成器负责：比赛展示材料输出
